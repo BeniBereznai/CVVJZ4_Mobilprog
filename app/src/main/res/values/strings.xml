@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CatchRegister</string>
+    <string name="add_catch_description">Add a new catch</string>
+</resources>

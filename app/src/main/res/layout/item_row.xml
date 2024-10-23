@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLayout">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <!-- ConstraintLayout to organize the views -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <!-- ID TextView (aligned to left) -->
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Weight TextView (aligned to right, same line as ID) -->
+            <TextView
+                android:id="@+id/weight_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:textSize="20sp"
+                android:textColor="#000"
+                app:layout_constraintTop_toTopOf="@id/id_text"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Lake TextView (next to ID) -->
+            <TextView
+                android:id="@+id/lake_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lake"
+                android:textSize="20sp"
+                android:textColor="#000"
+                app:layout_constraintTop_toTopOf="@id/id_text"
+                app:layout_constraintStart_toEndOf="@id/id_text"
+                android:layout_marginStart="16dp" />
+
+            <!-- Lake Unit TextView (aligned next to Lake) -->
+            <TextView
+                android:id="@+id/lake_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="m"
+                android:textSize="20sp"
+                android:textColor="#000"
+                app:layout_constraintStart_toEndOf="@id/lake_text"
+                app:layout_constraintTop_toTopOf="@id/lake_text"
+                android:layout_marginStart="4dp" />
+
+            <!-- Rig TextView (below Lake) -->
+            <TextView
+                android:id="@+id/rig_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rig"
+                android:textSize="20sp"
+                android:textColor="#000"
+                app:layout_constraintTop_toBottomOf="@id/lake_text"
+                app:layout_constraintStart_toStartOf="@id/lake_text"
+                android:layout_marginTop="8dp" />
+
+            <!-- Rod TextView (aligned to left, below Rig) -->
+            <TextView
+                android:id="@+id/rod_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rod"
+                android:textSize="20sp"
+                android:textColor="#000"
+                app:layout_constraintTop_toBottomOf="@id/rig_text"
+                app:layout_constraintStart_toStartOf="@id/lake_text"
+                android:layout_marginTop="8dp" />
+
+            <!-- Bait TextView (aligned to right, below Weight) -->
+            <TextView
+                android:id="@+id/bait_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bait"
+                android:layout_marginRight="30sp"
+                android:textSize="30sp"
+                android:textColor="#000"
+                app:layout_constraintTop_toBottomOf="@id/weight_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                 />
+
+            <!-- kg TextView (aligned to right, next to Bait) -->
+            <TextView
+                android:id="@+id/weight_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kg"
+                android:textSize="20sp"
+                android:textColor="#000"
+                app:layout_constraintStart_toEndOf="@id/bait_text"
+                app:layout_constraintTop_toTopOf="@id/bait_text"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
