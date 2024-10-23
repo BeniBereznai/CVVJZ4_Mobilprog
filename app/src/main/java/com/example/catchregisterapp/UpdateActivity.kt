@@ -26,7 +26,7 @@ class UpdateActivity : AppCompatActivity() {
     private var rig: String? = null
     private var rod: String? = null
 
-    // Osztályszintű rodOptions változó
+    // Osztályszintű rodOptions változó*
     private val rodOptions = arrayOf("Left rod", "Middle rod", "Right rod")
 
     override fun onCreate(savedInstanceState: Bundle?) {
